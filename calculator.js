@@ -1,5 +1,5 @@
 const calculator = {
-    add: function (a, b) {
+    plus: function (a, b) {
         console.log(a + b);
     },
     minus: function (a, b) {
@@ -16,8 +16,8 @@ const calculator = {
     },
 };
 
-calculator.add(5, 1);
-calculator.minus(5, 1);
-calculator.div(5, 1);
-calculator.multi(5, 1);
-calculator.powerof(5, 1);
+calculator.add(2, 3);
+calculator.minus(2, 3);
+calculator.div(2, 3);
+calculator.multi(2, 3);
+calculator.powerof(2, 3);
