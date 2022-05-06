@@ -1,3 +1,5 @@
 const clock = document.querySelector('h2#clock');
 
-clock.innerHTML = 'dkfjalkfdj';
+function sayHello() {
+    console.log('hello');
+}
