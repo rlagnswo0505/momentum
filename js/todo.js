@@ -5,11 +5,11 @@ const toDoList = document.querySelector('#todo-list');
 function paintToDo(newTodo) {
     const li = document.createElement('li');
     const span = document.createElement('span');
+    span.innerHTML = newTodo;
     const button = document.createElement('button');
+    button.innerHTML = '❌';
     li.appendChild(span);
     li.appendChild(button);
-    button.innerHTML = '❌';
-    span.innerHTML = newTodo;
     toDoList.appendChild(li);
 }
 
