@@ -13,6 +13,8 @@ function saveToDos() {
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
+  toDos = toDos.filter(toDo => toDo.id !== Number(li.id));
+  saveToDos();
 }
 
 function paintToDo(newTodo) {
@@ -37,7 +39,7 @@ function handleToDoSubmit(event) {
     id: Date.now(),
   };
   toDos.push(newTodoObj);
-  paintToDo(newTodo);
+  paintToDo(newTodoObj);
   saveToDos(toDos);
 }
 
