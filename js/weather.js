@@ -5,8 +5,12 @@ function onGeoOk(position) {
   const lon = position.coords.longitude;
   // units=metric 화씨온도를 섭씨온도로 변환
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-  console.log(url);
-  fetch(url);
+  fetch(url).then(response => response.json()).then(data => {
+    const weather = document.querySelector("#weather span:first-child")
+    const city = document.querySelector("#weather span:last-child")
+    city.innerHTML = data.name;
+    weather.innerHTML = `${data.weather[0].main} / ${data.main.temp}`
+  });
 }
 
 function onGeoError() {
